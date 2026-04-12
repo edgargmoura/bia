@@ -10,14 +10,8 @@ const VersionInfo = () => {
     if (import.meta.env.VITE_API_URL) {
       return import.meta.env.VITE_API_URL;
     }
-    
-    // Se estiver rodando no mesmo domínio (produção integrada)
-    if (window.location.port === '8080') {
-      return window.location.origin;
-    }
-    
-    // Desenvolvimento local - inferir porta 8080
-    return 'http://localhost:8080';
+
+    return window.location.origin;
   };
 
   const checkApiHealth = async () => {
