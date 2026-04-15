@@ -23,7 +23,7 @@ const AddTask = ({ onAdd }) => {
 
     setTitulo("");
     setDia("");
-    setImportante(false);
+    setImportante(true);
   };
 
   return (
